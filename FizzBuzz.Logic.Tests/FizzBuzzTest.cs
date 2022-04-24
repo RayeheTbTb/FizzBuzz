@@ -1,9 +1,5 @@
 ﻿using FizzBuzzGameLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentAssertions;
 using Xunit;
 
 namespace FizzBuzz.Logic.Tests
@@ -23,7 +19,7 @@ namespace FizzBuzz.Logic.Tests
             var number = 3;
 
             var expected = _sut.CheckNumber(number);
-
+            
             expected.Should().Be("Fizz");
         }
 
@@ -46,7 +42,5 @@ namespace FizzBuzz.Logic.Tests
 
             expected.Should().Be("FizzBuzz");
         }
-
-
     }
 }
