@@ -18,7 +18,7 @@ namespace FizzBuzz.Logic.Tests
         }
 
         [Fact]
-        public void Should_print_fizz_if_number_is_divisible_by_three()
+        public void Fizz_buzz_game_should_print_fizz_if_number_is_divisible_by_three()
         {
             var number = 3;
 
@@ -28,9 +28,25 @@ namespace FizzBuzz.Logic.Tests
         }
 
         [Fact]
-        public void Should_print_buzz_if_number_is_divisible_by_five()
+        public void Fizz_buzz_game_should_print_buzz_if_number_is_divisible_by_five()
         {
+            var number = 5;
 
+            var expected = _sut.CheckNumber(number);
+
+            expected.Should().Be("Buzz");
         }
+
+        [Fact]
+        public void Fizz_buzz_game_should_print_fizzbuzz_if_number_is_divisible_by_three_and_five()
+        {
+            var number = 15;
+
+            var expected = _sut.CheckNumber(number);
+
+            expected.Should().Be("FizzBuzz");
+        }
+
+
     }
 }
