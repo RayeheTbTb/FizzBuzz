@@ -16,5 +16,15 @@ namespace FizzBuzz.Logic.Tests
         {
             _sut = new FizzBuzzGame();
         }
+
+        [Fact]
+        public void Should_print_fizz_if_number_is_divisible_by_three()
+        {
+            var number = 3;
+
+            var expected = _sut.CheckNumber(number);
+
+            expected.Should().Be("Fizz");
+        }
     }
 }
