@@ -26,5 +26,11 @@ namespace FizzBuzz.Logic.Tests
 
             expected.Should().Be("Fizz");
         }
+
+        [Fact]
+        public void Should_print_buzz_if_number_is_divisible_by_five()
+        {
+
+        }
     }
 }
